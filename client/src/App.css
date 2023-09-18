@@ -1,0 +1,32 @@
+body{
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    color: #ffffff;
+  }
+
+.register--input {
+    display: block;
+    margin: 10px auto;
+    padding: 20px 0;
+  }
+
+  .register--button {
+    padding: 10px 5px;
+    margin: 10px auto;
+   
+    border-radius: 5px;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

@@ -27,6 +27,16 @@ app.post("/register", (req, res) =>{
     })
 });
 
+app.get("/get", (req, res) =>{
+
+    let SQL = "SELECT * from produtos ";
+
+    bd.query(SQL, (err, result) =>{
+        if(err) console.log(err);
+        else res.send(result);
+    }); 
+});
+
 app.listen(3001, () => {
     console.log("rodando servidor port 3001")
 });

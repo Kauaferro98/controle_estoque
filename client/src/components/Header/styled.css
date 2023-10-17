@@ -1,0 +1,17 @@
+.logo{
+    width: 50px;
+  height: 50px;
+}
+.item{
+    font-size: 25px;
+    
+}
+.item2{
+    font-size: 25px;
+}
+.app-list{
+    background-color: #212121;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}

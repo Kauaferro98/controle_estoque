@@ -9,6 +9,7 @@ function Read(){
         Axios.get("http://localhost:3001/get").then((response) => {setListProdutos(response.data);});
     },[]);
     
+    
     const handleClickButton = () =>{
         console.log(listProdutos);
         
@@ -33,7 +34,7 @@ function Read(){
                key={value.id} 
                listCard={listProdutos} 
                setListCard={setListProdutos}
-               id={value.id}
+               id={value.idprodutos}
                nomel={value.nomel}
                valor={value.valor}
                categoria={value.categoria}

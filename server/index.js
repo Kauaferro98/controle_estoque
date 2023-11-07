@@ -37,6 +37,21 @@ app.get("/get", (req, res) =>{
     }); 
 });
 
+app.put("/edit", (req, res) => {
+    const {id} = req.body;
+    const {nomel} = req.body;
+    const {valor} = req.body;
+    const {categoria} = req.body;
+    const {quantidade} = req.body;
+
+    let SQL = "UPDATE produtos SET nomel =?, valor =?, categoria =?, quantidade =? WHERE idprodutos = ?;"
+
+    bd.query(SQL, [nomel,valor,categoria,quantidade,id], (err, result) =>{
+        if(err) console.log(err)
+        else res.send(result);
+    })
+});
+
 app.listen(3001, () => {
     console.log("rodando servidor port 3001")
 });

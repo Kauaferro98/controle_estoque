@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Axios from "axios";
 import Header from "../../components/Header"
+import "./styled.css"
 
 
 function Creat(){
@@ -28,7 +29,7 @@ function Creat(){
       <div className="app--container">
         <Header/>
       <div>
-        <h1>Controle De Estoque</h1>
+        <h1 className="titulo">Controle De Estoque</h1>
         <input
         type="text"
         name="nomel"

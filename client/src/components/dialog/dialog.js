@@ -27,6 +27,11 @@ export default function FormDialog(props) {
         handleClose();
     };
 
+    const handleDeleteGame = () =>{
+      Axios.delete(`http://localhost:3001/delete/${editValues.id}`);
+      handleClose();
+    };
+
     const handleClickOpen = () => {
         props.setOpen(true);
       };
@@ -90,6 +95,7 @@ export default function FormDialog(props) {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleDeleteGame}>Excluir</Button>
           <Button onClick={handleEditProduto}>Salvar</Button>
         </DialogActions>
       </Dialog>

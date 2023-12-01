@@ -1,15 +1,18 @@
 .logo{
     width: 50px;
-  height: 50px;
+    height: 50px;
 }
 .item{
-    font-size: 25px;
+    font-size: 30px;
+    
     
 }
 .item2{
-    font-size: 25px;
+    font-size: 30px;
+    
 }
 .app-list{
+    
     background-color: #212121;
     width: 100%;
     text-align: center;

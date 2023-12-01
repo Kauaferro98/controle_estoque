@@ -52,6 +52,15 @@ app.put("/edit", (req, res) => {
     })
 });
 
+app.delete("/delete/:id", (req, res) =>{
+    const{id} = req.params;
+    let SQL = "DELETE FROM produtos WHERE idprodutos = ?";
+    bd.query(SQL, [id], (err, result) => {
+        if(err) console.log(err)
+        else res.send(result);
+    })
+});
+
 app.listen(3001, () => {
     console.log("rodando servidor port 3001")
 });

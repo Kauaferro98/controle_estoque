@@ -10,37 +10,29 @@ function Read(){
     },[]);
     
     
-    const handleClickButton = () =>{
-        console.log(listProdutos);
-        
-        
-    };
+   
     
     return(
         <div>
             <Header/>
             <div class="pesquisa-input">
-                <h1>Nome do Produto:</h1>
-                <input
-                type="text"
-                name="produto_pesquisado"
-                placeholder="Nome"
-                />
-                <button onClick={() => handleClickButton()}>Pesquisar</button>
+                <h1>Produtos:</h1>
+                
             </div>
-
-            {typeof listProdutos !== "undefined" && listProdutos.map((value)=>{
-               return <Card 
-               key={value.id} 
-               listCard={listProdutos} 
-               setListCard={setListProdutos}
-               id={value.idprodutos}
-               nomel={value.nomel}
-               valor={value.valor}
-               categoria={value.categoria}
-               quantidade={value.quantidade}
-               ></Card>;
-            })}
+            <div className="card">
+                {typeof listProdutos !== "undefined" && listProdutos.map((value)=>{
+                return <Card 
+                key={value.id} 
+                listCard={listProdutos} 
+                setListCard={setListProdutos}
+                id={value.idprodutos}
+                nomel={value.nomel}
+                valor={value.valor}
+                categoria={value.categoria}
+                quantidade={value.quantidade}
+                ></Card>;
+                })}
+            </div>
         </div>
     )
 }
